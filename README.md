@@ -3,4 +3,4 @@
 
 # Java Design Patterns web site
 
-Link for Website: https://java-design-patterns.com
+The source code in this repository is used to build the web site found at https://java-design-patterns.com
