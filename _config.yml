@@ -8,7 +8,7 @@ description: Java Design Patterns
 
 # ! Attention: the lines starting with "baseurl" and "url" are edited on travis build with a search and replace regex
 # Any Change in those two lines should be checked with the "cibuild" script
-baseurl: "/" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://java-design-patterns.com" # the base hostname & protocol for your site
 repo_url: "https://github.com/iluwatar/java-design-patterns"
 disqus_shortname: java-design-patterns
