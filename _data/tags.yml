@@ -1,0 +1,18 @@
+# ## Example Structure: ##
+# - name: Display Name
+#   description: This is a good description (and it's used in the tooltip!)
+
+- name: Java
+- name: Difficulty-Beginner
+- name: Difficulty-Intermediate
+- name: Difficulty-Expert
+- name: Gang Of Four
+- name: Spring
+- name: Apache Camel™
+- name: Functional
+- name: I/O
+- name: EIP
+  description: Enterprise Integration Patterns
+- name: Idiom
+- name: Performance
+- name: Reactive

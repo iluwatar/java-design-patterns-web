@@ -1,0 +1,39 @@
+<div id="footerScripts">
+<script type="text/javascript">
+    function addBlankTargetForLinks() {
+        $('a[href^="http"]').each(function() {
+            $(this).attr('target', '_blank');
+        });
+    }
+    $(document).bind('DOMNodeInserted', function(event) {
+        addBlankTargetForLinks();
+    });
+</script>
+
+{% assign url_parts = page.url | replace_first:'/' | split: '/' %}
+
+<!-- Only load Lunr if we are on the one pattern search page -->
+{% if url_parts[0] == "patterns" and url_parts.size == 1 %}
+    <script type="text/javascript" src="{{ '/static/js/lunr.min.js' | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ '/static/js/search.js' | prepend: site.baseurl }}"></script>
+{% endif %}
+
+<!-- Only load the ImageViewer if we are on a subpage of patterns or blog pages.
+     This is implemented this way because Liquid has a poor implementation of boolean algebra -->
+{% if url_parts[0] == "patterns" and url_parts.size > 1 %}
+    {% assign loadViewer = true %}
+{% elsif url_parts[0] == "blog" and url_parts.size > 1 %}
+    {% assign loadViewer = true %}
+{% endif %}
+
+{% if loadViewer %}
+    <!-- Viewer (image viewer) -->
+    <script type="text/javascript" src="{{ '/static/js/viewer.min.js' | prepend: site.baseurl }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ '/static/css/viewer.min.css' | prepend: site.baseurl }}">
+    <script type="text/javascript">
+        $.fn.viewer.setDefaults({ navbar: false, zoomRatio: 0.2 });
+        $('.row.post img, .row.pattern img').not('.noViewer').viewer();
+    </script>
+{% endif %}
+
+</div>

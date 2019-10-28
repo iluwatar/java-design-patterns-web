@@ -1,0 +1,29 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+    <div id="super-container"><!-- contains everything visible -->
+        {% include header.html %}
+
+        <div id="main" class="container main">
+            {{ content }}
+        </div>
+
+        <div id="top" data-toggle="tooltip" data-placement="left" title="Go to Top">
+            <a href="javascript:;">
+                <div class="arrow"></div>
+                <div class="stick"></div>
+            </a>
+        </div>
+
+        {% include footer.html %}
+    </div>
+    {% include footerScripts.html %}
+</body>
+
+</html>

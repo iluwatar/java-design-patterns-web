@@ -1,0 +1,52 @@
+---
+layout: default
+link-title: Patterns
+title: Patterns - Java Design Patterns
+description: This page lists all the Java Design Patterns. Currently our library contains more than hundred solutions developed by experienced open source developers and architects.
+permalink: /patterns/
+icon: fa-th-large
+page-index: 1
+---
+
+{% assign allPatterns = site.pages | where:"layout","pattern" | sort: 'title' %}
+<div id="patterns" class="row">
+    <!-- SIDEBAR -->
+    <div class="col-md-3 col-md-push-9">
+        {% include sidebar.html allItems=allPatterns %}
+    </div>
+    <!-- MAIN -->
+    <div class="col-md-9 col-md-pull-3">
+        <div class="content-area">
+            <div class="list-item-search">
+                <div class="input-group">
+                    <i class="fa fa-search input-group-addon" aria-hidden="true"
+                        data-toggle="tooltip" data-placement="left" title="Powered by lunrjs.com"></i>
+                    <input type="text" class="form-control" id="searchBox" placeholder="logging...">
+                </div>
+            </div>
+            <div class="post-list-body">
+
+                <div>
+                    {% for page in allPatterns %}
+                    <div class="list-item" href="{{ page.url | prepend: site.baseurl }}"
+                            cats='All;{{ page.categories | join: ';' }}'
+                            tags='All;{{ page.tags | join: ';' }}'>
+                        <a class="list-item-url" href="{{ page.url | prepend: site.baseurl }}">
+                            <span class="list-item-title">{{ page.title }}</span>
+                        </a>
+                        <div class="float-right">
+                            {% include labels.html categories=page.categories tags=page.tags useLinks="true" %}
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pattern-statistics row">
+    <div class="col-md-9">
+        Currently showing <span id="current-pattern-count-showing">{{ allPatterns | size }}</span> Patterns of {{ allPatterns | size }} Patterns total
+    </div>
+</div>

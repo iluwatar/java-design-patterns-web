@@ -1,0 +1,41 @@
+# Site settings
+title: Java Design Patterns
+description: Java Design Patterns
+# > # this means to ignore newlines until "baseurl:"
+#   Write an awesome description for your new site here. You can edit this
+#   line in _config.yml. It will appear in your document head meta (for
+#   Google search results) and in your feed.xml site description.
+
+# ! Attention: the lines starting with "baseurl" and "url" are edited on travis build with a search and replace regex
+# Any Change in those two lines should be checked with the "cibuild" script
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "https://java-design-patterns.com" # the base hostname & protocol for your site
+repo_url: "https://github.com/iluwatar/java-design-patterns"
+disqus_shortname: java-design-patterns
+permalink: /blog/:title/
+canonical_url: "https://java-design-patterns.com"
+#reviewmode: true
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+gems:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+kramdown:
+  input: GFM
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  hard_wrap: false
+  default_lang: java
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: false
+  ignore:
+    envs: [local]
+
+exclude: [Gemfile, bin, s3_website.yml, vendor, programming-principles/index.md, programming-principles/webpro.github.io, patterns/iterator/src/main/java/com/iluwatar/iterator/bst/README.md]

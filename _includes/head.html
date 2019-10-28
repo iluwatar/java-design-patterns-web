@@ -1,0 +1,38 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+    <link rel="canonical" href="{{ page.url | prepend: site.canonical_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl }}" />
+
+    <link rel="shortcut icon" type="image/png" href="{{ '/static/img/favicon.png' | prepend: site.baseurl }}" >
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Inconsolata|Indie+Flower|Lato|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- JQuery 2.1.4 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap 3.3.0 -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!-- Bootstrap Checkbox -->
+    <link rel="stylesheet" type="text/css" href="{{ '/static/css/awesome-bootstrap-checkbox.css' | prepend: site.baseurl }}">
+
+    <!-- Customizations -->
+    <script type="text/javascript" src="{{ '/static/js/index.js' | prepend: site.baseurl }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ '/static/css/index.css' | prepend: site.baseurl }}">
+
+    <!-- Google Analytics -->
+    {% include google_analytics.html %}
+
+    <!-- Google Adsense -->
+    <script data-ad-client="ca-pub-3166694824581143" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>

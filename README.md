@@ -1,2 +1,3 @@
-# java-design-patterns-web
-Java Design Patterns web site
+# Java Design Patterns web site
+
+Link for Website: https://java-design-patterns.com

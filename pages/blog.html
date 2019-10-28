@@ -1,0 +1,30 @@
+---
+layout: default
+link-title: Blog
+title: Blog - Java Design Patterns
+description: Java Design Patterns blogs are easy to understand guides and tutorials into design pattern implementation.
+permalink: /blog/
+icon: fa-align-justify
+page-index: 4
+---
+<div id="blog" class="row">
+    <div class="col-md-12">
+        <div class="content-area page">
+            <h1>Blog Posts</h1>
+            <div class="post-list-body">
+
+                {% for post in site.posts %}
+                <a class="list-item" href="{{ post.url | prepend: site.baseurl }}">
+                    <div class="float-right">
+                        <h5 class="blog-index-author"><span class="fa fa-user"></span> {{ site.data.people[post.author].name }}</h5>
+                        <h5 class="blog-index-date"><span class="fa fa-clock-o"></span> {{ post.date | date_to_string }}</h5>
+                    </div>
+                    <h2>{{ post.title }}</h2>
+                    <div> {{ post.excerpt }}</div>
+                </a>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
