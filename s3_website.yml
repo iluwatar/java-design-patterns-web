@@ -24,6 +24,3 @@ cloudfront_distribution_id: E1GTH8J7AJ8I1Z
 #       CNAME: java-design-patterns.com
 
 concurrency_level: 100
-
-redirects:
-  index.html: /patterns/
