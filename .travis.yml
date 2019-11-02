@@ -23,7 +23,7 @@ addons:
       - oracle-java8-installer
       
 script: bash cibuild.sh
-after_script: if [ "$TRAVIS_BRANCH" == "master" ]; then travis_retry bundle exec s3_website push; fi
+after_script: travis_retry bundle exec s3_website push
 
 cache: bundler
 

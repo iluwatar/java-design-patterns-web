@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-# need to init(download) our git submodule dependency first of all
-git submodule update --init
+# init git submodule dependencies
+git submodule update --init --recursive
 
 # add the currently used commit hash to the _config.yml so it can be displayed on the website
 printf "\ngithub:\n  build_revision: " >> _config.yml
