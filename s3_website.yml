@@ -5,16 +5,10 @@ s3_bucket: java-design-patterns.com
 max_age:
   "assets/*": 6000
   "*": 300
-
-# gzip:
-#   - .html
-#   - .css
-#   - .md
-
-# s3_endpoint: us-east-1
 s3_reduced_redundancy: true
 
 cloudfront_distribution_id: E1GTH8J7AJ8I1Z
+cloudfront_wildcard_invalidation: true
 # cloudfront_distribution_config:
 #   default_cache_behavior:
 #     min_TTL: <%= 60 * 60 * 24 %>
