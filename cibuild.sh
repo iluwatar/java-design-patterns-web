@@ -21,4 +21,4 @@ IGNORE_HREFS=$(ruby -e 'puts %w{
 # - ignore sonarqube.com/api/badges/gate because of travis-only 'SSL Connect Error's
 
 # - ignore everything below every webapp directory, so we dont mess with the source code
-bundle exec htmlproofer ./_site/ --file-ignore "/.+\/(webapp)\/.*/" --url-ignore $IGNORE_HREFS --check-html --allow-hash-href
+bundle exec htmlproofer ./_site/ --file-ignore "/.+\/(webapp)\/.*/" --url-ignore $IGNORE_HREFS --check-html --allow-hash-href --http-status-ignore "999"
