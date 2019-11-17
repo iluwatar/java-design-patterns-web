@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e # halt script on error
 
 # init git submodule dependencies
 git submodule update --init --recursive
