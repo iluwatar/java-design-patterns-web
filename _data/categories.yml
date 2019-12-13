@@ -1,26 +1,21 @@
 # ## Example Structure: ##
 # - name: Display Name
 #   description: This is a good description (and it's used in the tooltip!)
+#   icon: fa fa-plus
 
-- name: Creational
+- name: Architectural
   icon: "fa fa-plus"
-- name: Structural
+- name: Creational
   icon: "fa fa-university"
-- name: Concurrency
+- name: Structural
   icon: "fa fa-comments"
 - name: Behavioral
   icon: "fa fa-cogs"
-- name: Architectural
+- name: Concurrency
   icon: "fa fa-building-o"
 - name: Integration
   icon: "fa fa-sign-in"
-- name: Presentation Tier
+- name: Functional
   icon: "fa fa-file-powerpoint-o"
-- name: Business Tier
+- name: Idiom
   icon: "fa fa-briefcase"
-- name: Persistence Tier
-  icon: "fa fa-database"
-- name: Testing
-  icon: "fa fa-list-ul"
-- name: Other
-  icon: "fa fa-question"
