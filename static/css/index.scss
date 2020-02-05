@@ -106,29 +106,29 @@ a {
 }
 
 /* navbar */
-.navbar {
-    background-color: $base06;
-    border: none;
-    border-radius: none;
-    border-bottom: solid 1px $base04;
-}
+// .navbar {
+//     background-color: $base06;
+//     border: none;
+//     border-radius: none;
+//     border-bottom: solid 1px $base04;
+// }
 
-.nav {
-    &>li.active a {
-        background-color: $base05 !important;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
-    &>li {
-        text-align: center;
-    }
-    &>li>a {
-        color: $base02 !important;
-        &:hover, &:active {
-            color: $base00 !important;
-        }
-    }
-}
+// .nav {
+//     &>li.active a {
+//         background-color: $base05 !important;
+//         border-bottom-left-radius: 10px;
+//         border-bottom-right-radius: 10px;
+//     }
+//     &>li {
+//         text-align: center;
+//     }
+//     &>li>a {
+//         color: $base02 !important;
+//         &:hover, &:active {
+//             color: $base00 !important;
+//         }
+//     }
+// }
 
 /* index main */
 
@@ -567,16 +567,45 @@ h6:hover .header-link {
     height: 200px !important;
     border-radius: 0px !important;
     border-bottom-left-radius: 100% !important;
-}
-.viewer-button:before {
-    left: initial !important;
-    bottom: intial !important;
-    top: 45px !important;
-    right: 45px !important;
+    & :before {
+        left: initial !important;
+        bottom: intial !important;
+        top: 45px !important;
+        right: 45px !important;
+    }
 }
 
 .pattern-statistics {
   color: $base02;
   font-style: italic;
   text-align: center;
+}
+
+.navbar-brand {
+  padding: 0px;
+  @media screen and (min-width: 768px) and (max-width: 890px) {
+      line-height: 50px;
+  }
+  & >img {
+    max-height: 100%;
+    padding: 7px 15px;
+    width: auto;
+    @media screen and (min-width: 768px) and (max-width: 890px) {
+        width: calc(100vw - 569px);
+        margin: auto;
+        padding: 0 7px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    @media screen and (max-width: 768px) {
+        height: 95%;
+    }
+    @media screen and (max-width: 360px) {
+        height: 85%;
+    }
+  }
+}
+
+.navbar-nav>li>.dropdown-menu {
+  z-index: 9999;
 }
