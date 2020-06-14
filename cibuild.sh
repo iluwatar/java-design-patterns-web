@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# init git submodule dependencies
-git submodule update --init --recursive
+# clone the repositories we need
+git clone https://github.com/iluwatar/30-seconds-of-java.git
+git clone https://github.com/iluwatar/java-design-patterns.git patterns
+git clone https://github.com/iluwatar/programming-principles.git
 
 # add the currently used commit hash to the _config.yml so it can be displayed on the website
 printf "\ngithub:\n  build_revision: " >> _config.yml
