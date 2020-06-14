@@ -1,9 +1,0 @@
-[submodule "patterns"]
-	path = patterns
-	url = https://github.com/iluwatar/java-design-patterns.git
-[submodule "30-seconds-of-java"]
-	path = 30-seconds-of-java
-	url = https://github.com/iluwatar/30-seconds-of-java.git
-[submodule "programming-principles"]
-	path = programming-principles
-	url = https://github.com/iluwatar/programming-principles.git
