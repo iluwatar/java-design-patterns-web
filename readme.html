@@ -9,18 +9,34 @@ page-index: 0
 ---
 <!-- This file has to lie in the root because it references "patterns/README.md" relatively
     Jekyll doesnt support absolute including without adding plugins -->
-<div id="index" class="row">
-    <div class="col-md-12">
-        <div class="content-area page">
-<!-- These liquid lines mustn't have correct indent because it would trigger the automatic code formatting
-     of kramdown and convert html comments to code -->
-{% capture maincontent %}
-
-{% include_relative patterns/README.md %}
-
-{% endcapture %}
-
-{{ maincontent | markdownify }}
-        </div>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Java Design Patterns</h1>
+        <p>Design patterns are best practices a programmer can use to solve common problems when designing an
+            application or system.</p>
+        <p><a class="btn btn-primary btn-lg" href="/patterns/" role="button">Learn more &raquo;</a></p>
     </div>
 </div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Principles</h2>
+            <p>Software development has some universal principles that can guide and help during design, implementation and review.</p>
+            <p><a class="btn btn-default" href="/principles/" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Snippets</h2>
+            <p>30-seconds-of-java is a collection of reusable, tested, Java 11 compatible code snippets that we guarantee you can
+                understand in 30
+                seconds or less.</p>
+            <p><a class="btn btn-default" href="snippets.html" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Blog</h2>
+            <p>Find our latest blog content related to design patterns, architecture and open source.</p>
+            <p><a class="btn btn-default" href="/blog/" role="button">View details &raquo;</a></p>
+        </div>
+    </div>
+</div> <!-- /container -->
