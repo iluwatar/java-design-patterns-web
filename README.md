@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/iluwatar/java-design-patterns-web.svg?branch=master)](https://travis-ci.org/iluwatar/java-design-patterns-web)
-[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/iluwatar/java-design-patterns-web/master/LICENSE)
+[![Gitter](https://badges.gitter.im/iluwatar/java-design-patterns-web.svg)](https://gitter.im/iluwatar/java-design-patterns-web?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 # Java Design Patterns web site
 
