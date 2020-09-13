@@ -38,4 +38,4 @@ compress_html:
   ignore:
     envs: [local]
 
-exclude: [Gemfile, bin, s3_website.yml, vendor, programming-principles/index.md, programming-principles/webpro.github.io, patterns/iterator/src/main/java/com/iluwatar/iterator/bst/README.md, zh]
+exclude: [Gemfile, bin, s3_website.yml, vendor, programming-principles/index.md, programming-principles/webpro.github.io, patterns/iterator/src/main/java/com/iluwatar/iterator/bst/README.md, patterns/zh]
