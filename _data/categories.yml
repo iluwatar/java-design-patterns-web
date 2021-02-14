@@ -19,3 +19,5 @@
   icon: "fa fa-file-powerpoint-o"
 - name: Idiom
   icon: "fa fa-briefcase"
+- name: Cloud
+  icon: "fa fa-cloud"
