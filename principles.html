@@ -12,19 +12,22 @@ page-index: 2
 <div class="row">
     <div class="col-md-12">
         <div class="readme content-area page">
-            {% capture maincontent %}
+            
+<!-- These liquid lines mustn't have correct indent because it would trigger the automatic code formatting
+     of kramdown and convert html comments to code -->
 
-            {% include_relative programming-principles/README.md %}
+{% capture maincontent %}
 
-            {% endcapture %}
+{% include_relative programming-principles/README.md %}
 
-            {{ maincontent | markdownify }}
+{% endcapture %}
 
-            <a class="btn btn-primary" href="https://github.com/iluwatar/programming-principles" target="_blank">
-                <span class="glyphicon glyphicon-new-window"></span>
-                &nbsp;View Source on Github
-            </a>
-
+            <div>
+                <a class="btn btn-primary" href="https://github.com/iluwatar/programming-principles" target="_blank">
+                    <span class="glyphicon glyphicon-new-window"></span>
+                    &nbsp;View Source on Github
+                </a>
+            </div>
         </div>
     </div>
 </div>
