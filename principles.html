@@ -18,17 +18,12 @@ page-index: 2
 
             {% endcapture %}
 
-            <article>
-                {{ maincontent | remove: "# Programming Principles" | markdownify }}
-            </article>
+            {{ maincontent | markdownify }}
 
-            <a class="btn btn-primary" href="https://github.com/webpro/programming-principles/blob/gh-pages/README.md" target="_blank">
+            <a class="btn btn-primary" href="https://github.com/iluwatar/programming-principles" target="_blank">
                 <span class="glyphicon glyphicon-new-window"></span>
                 &nbsp;View Source on Github
             </a>
-
-            <hr class="dashed">
-            {% include author.html author="pro" %}
 
         </div>
     </div>
