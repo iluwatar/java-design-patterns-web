@@ -12,7 +12,7 @@ page-index: 2
 <div class="row">
     <div class="col-md-12">
         <div class="readme content-area page">
-            
+
 <!-- These liquid lines mustn't have correct indent because it would trigger the automatic code formatting
      of kramdown and convert html comments to code -->
 
@@ -22,7 +22,9 @@ page-index: 2
 
 {% endcapture %}
 
-            <div>
+{{ maincontent | markdownify }}
+
+            <div style="margin-top: 25px;">
                 <a class="btn btn-primary" href="https://github.com/iluwatar/programming-principles" target="_blank">
                     <span class="glyphicon glyphicon-new-window"></span>
                     &nbsp;View Source on Github
