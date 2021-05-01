@@ -19,7 +19,9 @@ before_install:
 install: bundle install --jobs=3 --retry=3
 
 script: bash cibuild.sh || true
-after_script: travis_retry bundle exec s3_website push
+after_script:
+    - bundle exec s3_website install
+    - java -cp $(bundle show s3_website)/*.jar s3.website.Push
 
 branches:
   only:
