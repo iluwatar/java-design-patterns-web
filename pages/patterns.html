@@ -8,7 +8,7 @@ icon: fa-th-large
 page-index: 1
 ---
 
-{% assign allPatterns = site.pages | where:"layout","pattern" | sort: 'title' %}
+{% assign allPatterns = site.pages | where:"layout","pattern" | where:"language", "en" | sort: 'title' %}
 <div id="patterns" class="row">
     <!-- SIDEBAR -->
     <div class="col-md-3 col-md-push-9">
@@ -27,10 +27,7 @@ page-index: 1
             <div class="post-list-body">
 
                 <div>
-					{% assign pagesAlreadyAdded = "" %}
                     {% for page in allPatterns %}
-					{% assign patternsAlreadyAdded = pagesAlreadyAdded | split : "," %}
-					{% unless patternsAlreadyAdded contains page.url %}
                     <div class="list-item" href="{{ page.url | prepend: site.baseurl }}"
                             cats='All;{{ page.categories | join: ';' }}'
                             tags='All;{{ page.tags | join: ';' }}'>
@@ -41,8 +38,6 @@ page-index: 1
                             {% include labels.html categories=page.categories tags=page.tags useLinks="true" %}
                         </div>
                     </div>
-					{% assign pagesAlreadyAdded = pagesAlreadyAdded | append : page.url |append: "," %}
-					{% endunless %}
                     {% endfor %}
                 </div>
             </div>
