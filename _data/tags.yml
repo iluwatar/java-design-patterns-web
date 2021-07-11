@@ -3,7 +3,6 @@
 #   description: This is a good description (and it's used in the tooltip!)
 
 - name: Cloud distributed
-- name: Data access
 - name: Decoupling
 - name: Extensibility
 - name: Enterprise Integration Pattern
@@ -15,3 +14,6 @@
 - name: Reactive
 - name: Security
 - name: Testing
+- name: Presentation
+- name: Domain
+- name: Data access
