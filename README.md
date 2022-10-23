@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.com/iluwatar/java-design-patterns-web.svg?branch=master)](https://travis-ci.com/iluwatar/java-design-patterns-web)
-[![Gitter](https://badges.gitter.im/iluwatar/java-design-patterns-web.svg)](https://gitter.im/iluwatar/java-design-patterns-web?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+## DEPRECATED - JUMP TO THE [CURRENT VERSION](https://github.com/iluwatar/java-design-patterns-vuepress-web)
 
 # Java Design Patterns web site
 
