@@ -105,7 +105,7 @@ GEM
       gemoji (~> 2.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0)
-    jmespath (1.4.0)
+    jmespath (1.6.1)
     json (1.8.5)
     kramdown (1.11.1)
     liquid (3.0.6)
